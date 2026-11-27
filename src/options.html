@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redline options</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">
+          <img src="../icons/icon48.png" width="32" height="32" alt="" />
+          <div>
+            <h1>Redline</h1>
+            <p class="tag">Options stay in this browser. Nothing here is analytics.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>LanguageTool server</h2>
+        <p class="help">Leave this empty to use the public server at api.languagetool.org. The text of a field you’re editing is sent there. A self-hosted server keeps that text on your machine — paste its base URL, such as http://localhost:8081.</p>
+        <div class="field" style="margin-top: 12px">
+          <label class="label" for="server">Server URL</label>
+          <input id="server" type="url" placeholder="https://api.languagetool.org" autocomplete="off" spellcheck="false" />
+        </div>
+        <label class="check">
+          <input id="picky" type="checkbox" />
+          <span>
+            <strong>Picky mode</strong>
+            <span class="help">Also flag style issues, such as wordy phrasing. Turn this off for spelling and grammar only.</span>
+          </span>
+        </label>
+        <div class="actions">
+          <button id="save-server" class="primary" type="button">Save</button>
+          <button id="test-server" class="secondary" type="button">Test connection</button>
+          <button id="clear-server" class="secondary" type="button">Use public server</button>
+        </div>
+        <p class="result" id="server-result" role="status"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Personal dictionary</h2>
+        <p class="help">Words you add are stored with chrome.storage on this browser and are not sent to LanguageTool. Spelling and exact saved phrases stop being flagged.</p>
+        <form id="dict-form" class="dict-form">
+          <input id="dict-word" type="text" placeholder="Add a word" autocomplete="off" />
+          <button class="primary" type="submit">Add</button>
+        </form>
+        <p class="help" id="dict-error" role="status"></p>
+        <div class="chips" id="dict-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Ignored</h2>
+        <p class="help">Ignore hides one rule for one word or phrase, everywhere you type.</p>
+        <div class="ignored" id="ignored-list"></div>
+        <div class="actions">
+          <button id="clear-ignored" class="secondary" type="button">Clear ignored</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Stats</h2>
+        <div class="stats-line">
+          <div><strong id="stat-checks">0</strong><span>Checks</span></div>
+          <div><strong id="stat-fixes">0</strong><span>Fixes</span></div>
+          <div><strong id="stat-words">0</strong><span>Dictionary</span></div>
+        </div>
+        <div class="actions">
+          <button id="reset-stats" class="secondary" type="button">Reset counts</button>
+        </div>
+      </section>
+    </main>
+    <script src="common.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 280px at 10% -10%, rgba(212, 53, 44, 0.08), transparent 60%),
+    var(--paper);
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+header { margin-bottom: 22px; }
+
+.panel {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+
+.panel h2 {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 14px;
+}
+
+.check input { margin-top: 3px; }
+.check .help { display: block; margin-top: 2px; }
+
+.result { min-height: 1.2em; margin: 10px 0 0; }
+
+.result.ok { color: var(--green); }
+.result.bad { color: var(--red); }
+
+.dict-form { display: flex; gap: 8px; margin: 12px 0; }
+.dict-form input { flex: 1; }
+
+.chips, .ignored { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.chip, .ignored-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 4px 4px 10px;
+}
+
+.ignored-item { border-radius: 10px; padding: 6px 6px 6px 10px; align-items: flex-start; }
+.ignored-item small { display: block; color: var(--muted); font-size: 11px; }
+
+.chip button, .ignored-item button {
+  border: 0;
+  background: transparent;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chip button:hover, .ignored-item button:hover { background: rgba(28, 23, 18, 0.06); }
+
+.stats-line {
+  display: flex;
+  gap: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-line strong { font-family: var(--serif); font-size: 28px; font-weight: 600; display: block; }
+.stats-line span { color: var(--muted); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redline</title>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src="../icons/icon32.png" width="32" height="32" alt="" />
+        <div>
+          <h1>Redline</h1>
+          <p>Spelling and grammar as you type</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <div>
+          <div class="label">Extension</div>
+          <div class="value" id="global-state">On</div>
+        </div>
+        <button id="global-toggle" class="switch" type="button" role="switch" aria-checked="true" aria-label="Turn Redline on or off"></button>
+      </div>
+      <div class="row" id="site-row">
+        <div>
+          <div class="label">This site</div>
+          <div class="value" id="site-host">Current site</div>
+        </div>
+        <button id="site-toggle" class="switch" type="button" role="switch" aria-checked="true" aria-label="Turn Redline on or off for this site"></button>
+      </div>
+    </section>
+
+    <p class="notice" id="notice" hidden></p>
+
+    <section class="card">
+      <div class="field">
+        <label class="label" for="language">Language</label>
+        <select id="language"></select>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Statistics">
+      <div><strong id="stat-page">—</strong><span>This page</span></div>
+      <div><strong id="stat-fixes">0</strong><span>Fixes</span></div>
+      <div><strong id="stat-checks">0</strong><span>Checks</span></div>
+    </section>
+
+    <footer>
+      <button id="options" class="text-btn" type="button">Options and dictionary</button>
+      <p class="fine">With the public server, text in the field you’re editing is sent to LanguageTool. No analytics.</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

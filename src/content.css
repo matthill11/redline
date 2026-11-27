@@ -1,0 +1,31 @@
+/* Highlight styles for contenteditable editors. Textareas use the overlay in the content script. */
+
+::highlight(redline-spelling) {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #d4352c;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+  background-color: rgba(212, 53, 44, 0.13);
+}
+
+::highlight(redline-grammar) {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #2457d6;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+  background-color: rgba(36, 87, 214, 0.13);
+}
+
+::highlight(redline-style) {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #d08900;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: none;
+  background-color: rgba(208, 137, 0, 0.16);
+}
