@@ -90,4 +90,6 @@ The personal dictionary, ignore list, Grok tokens, and an optional API key stay 
 
 ## License
 
-No license has been chosen yet. Until a `LICENSE` file is added, all rights belong to the copyright holder. Do not assume this project is open source.
+Redline is licensed under the [GNU General Public License v3.0](LICENSE). You can use, study, change, and share it, but any version you distribute must also be released under GPL v3 with its source code.
+
+Copyright (C) 2026 Matthew Hill
